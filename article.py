@@ -14,10 +14,8 @@ class Article(ABC):
         self.brand = brand
         self.style = style
         self.pattern = pattern
-        super().__init__()
 
     # Get methods:
-
     def getProductNumber(self):
         return self.product_number
 
