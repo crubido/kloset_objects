@@ -1,26 +1,32 @@
-from tops import Tops
-from bottons import Bottons
-from shoewear import Shoewear
-from accesories import Accessories
-from full_body import Fullbody
-
-
-class Outfit (Tops, Bottons, Shoewear, Accessories):
+class Outfit (object):
     nextOutfitIdNum = 0
 
-    def __init__(self, product_number, product_name, product_description, color, texture, material, sex, brand, style, pattern):
-        Tops.__init__(self, product_number, product_name, product_description,
-                      color, texture, material, sex, brand, style, pattern)
-        Bottons.__init__(self, product_number, product_name, product_description,
-                         color, texture, material, sex, brand, style, pattern)
-        Shoewear.__init__(self, product_number, product_name, product_description,
-                          color, texture, material, sex, brand, style, pattern)
-        Accessories.__init__(self, product_number, product_name, product_description,
-                             color, texture, material, sex, brand, style, pattern)
-        Fullbody.__init__(self, product_number, product_name, product_description,
-                          color, texture, material, sex, brand, style, pattern)
+    def __init__(self, top, bottom, shoeware, accesory, fullbody):
+        self.__top = top
+        self.__bottom = bottom
+        self.__shoeware = shoeware
+        self.__accesory = accesory
+        self.__fullbody = fullbody
         self.idNum = Outfit.nextOutfitIdNum
+        Outfit.nextOutfitIdNum += 1
 
-    # Get the idNum of an outfit:
+    # Get methods:
+    def getTop(self):
+        return [self.__top.getProductNumber(), self.__top.getProductName(), self.__top.getProductDescription(), self.__top.getColor(), self.__top.getTexture(), self.__top.getMaterial(), self.__top.getSex(), self.__top.getBrand(), self.__top.getStyle(), self.__top.getPattern()]
+
+    def getBottom(self):
+        return self.__bottom
+
+    def getShoeware(self):
+        return self.__shoeware
+
+    def getAccesory(self):
+        return self.__accesory
+
+    def getFullbody(self):
+        return self.__fullbody
+
+    # Set methods
+
     def getIdNum(self):
         return self.idNum
