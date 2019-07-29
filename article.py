@@ -4,75 +4,82 @@ from abc import ABC, abstractmethod
 class Article(ABC):
 
     def __init__(self, product_number, product_name, product_description, color, texture, material, sex, brand, style, pattern):
-        self.product_number = product_number
-        self.product_name = product_name
-        self.product_description = product_description
-        self.color = color
-        self.texture = texture
-        self.material = material
-        self.sex = sex
-        self.brand = brand
-        self.style = style
-        self.pattern = pattern
+        self.__product_number = product_number
+        self.__product_name = product_name
+        self.__product_description = product_description
+        self.__color = color
+        self.__texture = texture
+        self.__material = material
+        self.__sex = sex
+        self.__brand = brand
+        self.__style = style
+        self.__pattern = pattern
 
     # Get methods:
     def getProductNumber(self):
-        return self.product_number
+        return self.__product_number
 
     def getProductName(self):
-        return self.product_name
+        return self.__product_name
 
     def getProductDescription(self):
-        return self.product_description
+        return self.__product_description
 
     def getColor(self):
-        return self.color
+        return self.__color
 
     def getTexture(self):
-        return self.texture
+        return self.__texture
 
     def getMaterial(self):
-        return self.material
+        return self.__material
 
     def getSex(self):
-        return self.sex
+        return self.__sex
 
     def getBrand(self):
-        return self.brand
+        return self.__brand
 
     def getStyle(self):
-        return self.style
+        return self.__style
 
     def getPattern(self):
-        return self.pattern
+        return self.__pattern
 
     # Set Methods:
     def setProductNumber(self, product_number):
-        self.product_number = product_number
+        self.__product_number = product_number
 
     def setProductName(self, product_name):
-        self.product_name = product_name
+        self.__product_name = product_name
 
     def setProductDescription(self, product_description):
-        self.product_description = product_description
+        self.__product_description = product_description
 
     def setColor(self, color):
-        self.color = color
+        self.__color = color
 
     def setTexture(self, texture):
-        self.texture = texture
+        self.__texture = texture
 
     def setMaterial(self, material):
-        self.material = material
+        self.__material = material
 
     def setSex(self, sex):
-        self.sex = sex
+        self.__sex = sex
 
     def setBrand(self, brand):
-        self.brand = brand
+        self.__brand = brand
 
     def setStyle(self, style):
-        self.style = style
+        self.__style = style
 
     def setPattern(self, pattern):
-        self.pattern = pattern
+        self.__pattern = pattern
+
+
+class Tops(Article):
+
+    def __init__(self, product_number, product_name, product_description, color, texture, material, sex, brand, style, pattern):
+        Article.__init__(self, product_number, product_name, product_description,
+                         color, texture, material, sex, brand, style, pattern)
