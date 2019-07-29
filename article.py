@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 
+
 class Article(ABC):
 
     def __init__(self, product_number, product_name, product_description, color, texture, material, sex, brand, style, pattern):
@@ -15,8 +16,8 @@ class Article(ABC):
         self.pattern = pattern
         super().__init__()
 
+    # Get methods:
 
-    #Get methods:
     def getProductNumber(self):
         return self.product_number
 
@@ -37,7 +38,7 @@ class Article(ABC):
 
     def getSex(self):
         return self.sex
-    
+
     def getBrand(self):
         return self.brand
 
@@ -47,7 +48,7 @@ class Article(ABC):
     def getPattern(self):
         return self.pattern
 
-    #Set Methods:
+    # Set Methods:
     def setProductNumber(self, product_number):
         self.product_number = product_number
 
@@ -62,7 +63,7 @@ class Article(ABC):
 
     def setTexture(self, texture):
         self.texture = texture
-    
+
     def setMaterial(self, material):
         self.material = material
 
