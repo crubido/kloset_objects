@@ -53,6 +53,12 @@ def main():
 
     getItemInList()
     print(firstOutfit.getTop())
+    print(firstOutfit.getBottom())
+    print(firstOutfit.getShoeware())
+    print(firstOutfit.getFullbody())
+    print(firstOutfit.getAccesory())
+
+    print(firstOutfit.getOutfit())
 
 
 if __name__ == "__main__":
