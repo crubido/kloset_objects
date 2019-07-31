@@ -31,4 +31,22 @@ class Outfit (object):
 
     def getOutfit(self):
         return {"Outfit ID": self.getIdNum(), "Top": self.getTop(), "Bottom": self.getBottom(), "Shoeware": self.getShoeware(), "Accesory": self.getAccesory(), "Full Body": self.getFullbody()}
+
     # Set methods
+    def setTop(self, top):
+        self.__top = top
+
+    def setBottom(self, bottom):
+        self.__bottom = bottom
+
+    def setShoeware(self, shoeware):
+        self.__shoeware = shoeware
+
+    def setAccesory(self, accesory):
+        self.__accesory = accesory
+
+    def setFullbody(self, fullbody):
+        self.__fullbody = fullbody
+
+    def setIdNum(self, idNum):
+        self.idNum = idNum
